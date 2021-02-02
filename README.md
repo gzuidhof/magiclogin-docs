@@ -4,8 +4,6 @@ description: Welcome
 
 # Introduction
 
-## Getting Started
-
 Magic Login is a service that allows you to send **transactional** e-mails with templates and support for **authentication tokens** built-in.
 
 What that means is that you can send e-mails that contain a button \(that is a link to a URL\), and based on the token in this URL you can verify that it was in fact this e-mail's owner that clicked the link.
