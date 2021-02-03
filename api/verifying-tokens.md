@@ -6,7 +6,7 @@ description: >-
 
 # Verifying Tokens
 
-{% api-method method="post" host="https://api.cakes.com" path="/v1/verifyEmailToken" %}
+{% api-method method="post" host="https://api.magiclogin.net" path="/v1/verifyEmailToken" %}
 {% api-method-summary %}
 Verify Email Token
 {% endapi-method-summary %}
