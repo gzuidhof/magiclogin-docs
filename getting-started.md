@@ -10,7 +10,7 @@ description: Sending your first e-mail using the Magic Login API
 
 All API requests you make are associated with a certain Application. You can create one from the [**Applications page**](https://magiclogin.net/dashboard/applications) in the dashboard.
 
-After creating it an **Application ID** will be shown which we will need later, it looks like `app_aBcDeFg`.
+After creating it an **Application ID** will be shown which we will need later, it looks like `app_aBcDeFg`. You can hardcode this value in your application code.
 
 ## Creating an API Token
 
