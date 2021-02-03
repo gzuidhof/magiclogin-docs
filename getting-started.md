@@ -6,10 +6,6 @@ description: Sending your first e-mail using the Magic Login API
 
 ## Creating an Application
 
-{% hint style="info" %}
-To make use of Magic Login's APIs you will need a Magic Login account. There is a free trial ****that doesn't require payment details. If you want to keep using it after the trial ends you will have to enter your payment details. 
-{% endhint %}
-
 **Applications** are organizational units within your account that help you keep your different websites/apps separated. Think of them as projects: if you are building both _**AirBnB for Cats**_ and _**Netflix for Dogs**_ ****it would make sense to create two separate Applications for that.
 
 All API requests you make are associated with a certain Application. You can create one from the [**Applications page**](https://magiclogin.net/dashboard/applications) in the dashboard.

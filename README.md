@@ -16,9 +16,13 @@ That's exactly what you need for:
 * Password reset e-mails
 * E-mail sharing or account invites \(e.g. click link in e-mail to get access to this document\).
 
+{% hint style="info" %}
+To make use of Magic Login you will need an account. There is a free trial ****that doesn't require payment details.
+
+If you want to keep using Magic Login after the trial period ends you will need to enter your payment details. 
+{% endhint %}
+
 **Next up**
 
 {% page-ref page="getting-started.md" %}
-
-
 

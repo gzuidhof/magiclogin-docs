@@ -5,7 +5,8 @@
 
 ## API
 
-* [sendTemplateEmail](api/sendtemplateemail.md)
+* [Sending Emails](api/sending-emails.md)
+* [Verifying Tokens](api/verifying-tokens.md)
 
 ---
 
