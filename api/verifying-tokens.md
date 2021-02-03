@@ -6,7 +6,7 @@ description: >-
 
 # Verifying Tokens
 
-{% api-method method="post" host="https://api.magiclogin.net" path="/v1/verifyEmailToken" %}
+{% api-method method="post" host="https://api.magiclogin.net" path="/v1/{app\_id}/verifyEmailToken" %}
 {% api-method-summary %}
 Verify Email Token
 {% endapi-method-summary %}
@@ -21,8 +21,8 @@ If I sent an e-mail to user **ilovecats@gmail.com** with an action to sign up fo
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
-{% api-method-parameter name="id" type="string" %}
-ID of the cake to get, for free of course.
+{% api-method-parameter name="app\_id" type="string" %}
+Your **Application ID** \(copy it from the Applications page\)
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
@@ -39,10 +39,6 @@ The token that was in the URL \(with the \`mtoken\` key\).
 
 {% api-method-parameter name="purpose" type="string" required=false %}
 Check that the token had a specific purpose.
-{% endapi-method-parameter %}
-
-{% api-method-parameter name="app\_id" type="string" required=true %}
-Your Application ID.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="consume" type="string" required=true %}

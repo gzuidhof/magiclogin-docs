@@ -4,7 +4,7 @@ description: Sending e-mails is what Magic Login is all about.
 
 # Sending Emails
 
-{% api-method method="post" host="https://api.magiclogin.net" path="/v1/sendTemplateEmail" %}
+{% api-method method="post" host="https://api.magiclogin.net" path="/v1/{app\_id}/sendTemplateEmail" %}
 {% api-method-summary %}
 Send Template Email
 {% endapi-method-summary %}
@@ -15,6 +15,12 @@ This method is how you send e-mails that look good without having to deal with e
 
 {% api-method-spec %}
 {% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="app\_id" type="string" required=false %}
+Your **Application ID** \(copy it from the Applications page\)
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+
 {% api-method-headers %}
 {% api-method-parameter name="Authentication" type="string" required=true %}
 Your API Token, in the form of \`Bearer &lt;api-token&gt;\`  
@@ -44,10 +50,6 @@ The **TemplateStyle** object for this e-mail, see below.
 
 {% api-method-parameter name="content" type="object" required=true %}
 The **TemplateEmailContent** object for this e-mail, see below.
-{% endapi-method-parameter %}
-
-{% api-method-parameter name="app\_id" type="string" required=true %}
-Your application ID
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}

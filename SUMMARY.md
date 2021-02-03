@@ -1,7 +1,7 @@
 # Table of contents
 
 * [Introduction](README.md)
-* [Getting Started](getting-started.md)
+* [Setting Up](setting-up.md)
 
 ## API
 

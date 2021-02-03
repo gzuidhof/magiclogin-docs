@@ -22,7 +22,5 @@ To make use of Magic Login you will need an account. There is a free trial ****t
 If you want to keep using Magic Login after the trial period ends you will need to enter your payment details. 
 {% endhint %}
 
-**Next up**
-
-{% page-ref page="getting-started.md" %}
+{% page-ref page="setting-up.md" %}
 
