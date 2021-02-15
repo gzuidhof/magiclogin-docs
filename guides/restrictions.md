@@ -33,7 +33,7 @@ We enforce best practices in terms of DNS setup with **DKIM** and **SPF** and we
 
 We can offer dedicated IPs to large customers on request against an additional payment. These put your sending reputation entirely in your hands.
 
-Dedicated IPs only make sense if you are sending at least half a million e-mails per month \(despite what other e-mail providers want you to believe\). At smaller sending rates they will do more harm than good. 
+Dedicated IPs only make sense if you are sending at least 500,000 e-mails per month \(despite what other e-mail providers want you to believe\). At smaller sending rates they will do more harm than good. 
 
 ## Tips for good e-mail deliverability
 
