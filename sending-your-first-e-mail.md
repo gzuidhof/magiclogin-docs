@@ -9,7 +9,7 @@ You send e-mails in Magic Login through a JSON API.
 Before we start, let's look at an example API request to the SendTemplateEmail endpoint that makes it trivial to send e-mails that look good on any device. Below is an example body of such a request:
 
 {% hint style="success" %}
-Where possible, Magic Login's API support **Markdown** formatting!
+Where possible, Magic Login's API supports **Markdown**.
 {% endhint %}
 
 ```javascript
