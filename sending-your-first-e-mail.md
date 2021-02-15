@@ -45,7 +45,7 @@ To authenticate you are required to send a **header** with name **`Authorization
 {% hint style="info" %}
 Replace `<YOUR-APP-ID>` with the **Application ID** and replace `<YOUR-API-TOKEN>`by the **API Token** we created during [**setup**](setting-up.md#creating-an-application)**.**
 
-Reminder: the API Token is a secret, don't put it in your front-end code.
+Reminder: the API Token is a secret, don't put it in your front-end code. You should only make requests to the Magic Login API from your server backend, never your front-end client.
 {% endhint %}
 
 You will be able to make this request from any programming language, here's a **Node.js** example that uses the popular **axios** library:
