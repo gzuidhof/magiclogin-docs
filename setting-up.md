@@ -18,12 +18,12 @@ When you talk to the Magic Login API we need to know who you are, that's what AP
 
 You can create an API token on the [**API Tokens**](https://magiclogin.net/dashboard/apiTokens) page in the dashboard. It's a good idea to name them after where they are used \(e.g. _**AirBnB for Cats production webserver**_\).
 
-API Tokens are only visible after they have just been created and can not be recovered later, make sure to copy paste it now.
-
 Don't worry if you lose your API token, you can always generate a new one.
 
 {% hint style="warning" %}
 **API Tokens are secret**, treat them as a password! 
+
+API Tokens are only visible after they have just been created and can not be recovered later.
 {% endhint %}
 
 ## Ready for the launch
