@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This guide will run you through sending your first e-mail that contains an **action**. An **action** is a button \(or really a link\) inside your e-mail, such as **"Click to sign up to AirBnB for cats"**.
+This guide will run you through sending your first e-mail that contains an **action**. An **action** is a button \(or really a link\) inside your e-mail, such as **"Click to sign up to AirBnB for Cats"**.
 
 You send e-mails in Magic Login through a JSON API. 
 
@@ -98,7 +98,7 @@ That's it! We just sent our first e-mail using the Magic Login API 🎉.
 
 ## What happens now?
 
-Our recipient **tabby@ilovecats.com** will have received an e-mail with a big blue button that says **Create Account**. This button links to something like **`https://airbnbforcats.com/magic?mtoken=9nwTWNkNDG1TgwaNzVAt3t`**.
+Our recipient **tabby@ilovecats.com** will have received an e-mail with a big button that says **Create Account**. This button links to something like **`https://airbnbforcats.com/magic?mtoken=9nwTWNkNDG1TgwaNzVAt3t`**.
 
   
 Note how the **mtoken** query parameter got added to the URL. This is a secret token that we will verify in the next guide, which will allow us to **authenticate** the recipient of the e-mail.
