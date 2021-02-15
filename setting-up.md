@@ -23,7 +23,7 @@ Don't worry if you lose your API token, you can always generate a new one.
 {% hint style="warning" %}
 **API Tokens are secret**, treat them as a password! 
 
-API Tokens are only visible after they have just been created and can not be recovered later.
+API Tokens are only visible after they were just created and can not be recovered later.
 {% endhint %}
 
 ## Ready for the launch
