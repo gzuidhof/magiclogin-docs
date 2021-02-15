@@ -2,11 +2,13 @@
 
 Magic Login is a service for **transactional e-mails**. Transactional e-mails are usually triggered by the user or other events, for instance they are sent when the user wishes to log in. 
 
-Examples of non-transactional e-mails \(**which Magic Login must not be used for**\) are newsletters and marketing e-mails. You need to use a different service for those, e-mails such as **Substack** or **buttondown.email**.
+Examples of **non-transactional** e-mails are newsletters and marketing e-mails. You need to use a different service for those. Examples are [**Substack**](https://substack.com/) or [**buttondown.email**](https://buttondown.email/).
 
-**We have to be strict about this.** Restricting usage to transactional e-mails helps us ensure good and fast deliverability.
+{% hint style="warning" %}
+**We have to be strict about this.**
 
-
+Restricting our service to transactional e-mails only helps us ensure good and fast deliverability.
+{% endhint %}
 
 
 

@@ -8,8 +8,8 @@
 ## Guides and Knowledge <a id="guides"></a>
 
 * [Sending from your own domain](guides/sending-from-your-own-domain.md)
-* [What kind of e-mails can I send?](guides/what-kind-of-e-mails-can-i-send.md)
 * [Email deliverability and reputation](guides/restrictions.md)
+* [What kind of e-mails can I send?](guides/what-kind-of-e-mails-can-i-send.md)
 
 ## API
 
