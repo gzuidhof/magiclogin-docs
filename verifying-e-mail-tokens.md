@@ -45,20 +45,20 @@ That's it, we have succesfully authenticated **tabby@ilovecats.com** and can all
 
 In some cases however you will want to _**consume**_ the token, which marks the token so it can not be used again. You should do this when you use Magic Login for logging in users. We'll cover that next.
 
-## Consuming the token
+## Consuming the token \(optional\)
 
 {% hint style="success" %}
 ### Tip: _****_don't immediately consume the token on page load
 
-First check validity, passing**`consume: false`**_**.**_ If the token is valid show the user a page that allows them to actually perform the action using a button, instead of immediately performing the action.
+First check validity, passing**`consume: false`**_**.**_ If the token is valid show the user a page that allows them to perform the action using a button, instead of doing so automatically.
 
 For a login action this could be a big button that says: **"Sign in to AirBnB for Cats"**. For signup this could be a form where the user has to fill additional details for account creation \(e.g. their name, address, etc\). You can embed the token in the form using a hidden field.
 
-When the user clicks the button or submits the form, verify the token again - this time with **`consume: true`**
+When the user clicks the button or submits the form, verify the token again - this time with **`consume: true`**.
 
 **Why?**
 
-It allows users that accidentally open the link in a browser they don't want to use to copy paste the URL to a different one \(perhaps even on a different device\). 
+It allows users that accidentally open the link in the wrong browser to copy paste the URL to a different one \(perhaps even on a different device\). 
 
 Also some poorly configured e-mail providers will fetch all URLs as part of their virus scans.
 {% endhint %}

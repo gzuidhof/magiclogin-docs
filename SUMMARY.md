@@ -15,6 +15,7 @@
 
 * [Sending Emails](api/sending-emails.md)
 * [Verifying Tokens](api/verifying-tokens.md)
+* [API Errors](api/api-errors.md)
 
 ---
 
