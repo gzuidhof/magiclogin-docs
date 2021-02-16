@@ -14,7 +14,7 @@ After creating it an **Application ID** will be shown which we will need later, 
 
 ## Creating an API Token
 
-When you talk to the Magic Login API we need to know who you are, that's what API Tokens are for. You can create as many as you would like.
+When you talk to the Magic Login API we need to know who you are, that's what API Tokens are for.
 
 You can create an API token on the [**API Tokens**](https://magiclogin.net/dashboard/apiTokens) page in the dashboard. It's a good idea to name them after where they are used \(e.g. _**AirBnB for Cats production webserver**_\).
 

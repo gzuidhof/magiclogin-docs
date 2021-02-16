@@ -2,11 +2,9 @@
 
 ## Introduction
 
-This guide will run you through sending your first e-mail that contains an **action**. An **action** is a button \(or really a link\) inside your e-mail, such as **"Click to sign up to AirBnB for Cats"**.
+This guide will run you through sending your first e-mail that contains an **action**. An **action** is a button \(or really a link\) inside your e-mail, such as **"Click to sign up to AirBnB for Cats"**.You send e-mails in Magic Login through a JSON HTTP API. 
 
-You send e-mails in Magic Login through a JSON API. 
-
-Before we start, let's look at an example API request to the SendTemplateEmail endpoint that makes it trivial to send e-mails that look good on any device. Below is an example body of such a request:
+Let's look at an example API request to the SendTemplateEmail endpoint:
 
 {% hint style="success" %}
 Where possible, Magic Login's API supports **Markdown**.
@@ -15,6 +13,7 @@ Where possible, Magic Login's API supports **Markdown**.
 ```javascript
 {
     "from": "AirBnB for Cats <airbnbforcats@magiclogin.email>",
+    "reply_to": "Cat Jones <cat@airbnbforcats.com>",
     "to": "tabby@ilovecats.com",
     "subject": "Please verify your e-mail to sign up",
     
@@ -32,15 +31,13 @@ Where possible, Magic Login's API supports **Markdown**.
 }
 ```
 
-Here's a screenshot of the e-mail this results in:
-
-
+![Screenshot of the resulting e-mail](.gitbook/assets/airbnbforcats_welcome.png)
 
 ## **Making the actual request**
 
 We will make a HTTP **POST** request to**`https://api.magiclogin.net/<YOUR-APP-ID>/v1/sendTemplateEmail`**.
 
-To authenticate you are required to send a **header** with name **`Authorization`** and value`Bearer <YOUR-API-TOKEN>`.
+To authenticate you are required to send a header with name **`Authorization`** and value`Bearer <YOUR-API-TOKEN>`.
 
 {% hint style="info" %}
 Replace `<YOUR-APP-ID>` with the **Application ID** and replace `<YOUR-API-TOKEN>`by the **API Token** we created during [**setup**](setting-up.md#creating-an-application)**.**
@@ -53,16 +50,16 @@ You will be able to make this request from any programming language, here's a **
 ```javascript
 const axios = require("axios");
 
-const apiToken = "apitoken_secretsecretsecret";
-const appID = "app_example";
+const apiToken = "apitoken_secretsecretsecretsecret";
+const appID = "app_eXAmple";
 
 const url = `https://api.magiclogin.net/v1/${appID}/sendTemplateEmail`;
 const headers = {
-    "Authorization": `Bearer ${apiToken}`,
-    "Content-Type":  "application/json"
+  "Authorization": `Bearer ${apiToken}`
 };
 const body = {
     "from": "AirBnB for Cats <airbnbforcats@magiclogin.email>",
+    "reply_to": "Cat Jones <cat@airbnbforcats.com>",
     "to": "tabby@ilovecats.com",
     "subject": "Please verify your e-mail to sign up",
     "content": {
@@ -78,30 +75,44 @@ const body = {
     }
 }
 
-axios.post(url, {body: body, headers: headers})
-  .then(res => {
-    console.log(`statusCode: ${res.statusCode}`)
-    console.log(res)
+axios.post(url, body, {headers: headers})
+  .then(response => {
+    console.log(`status: ${response.status}`)
+    console.log(response.data)
   })
   .catch(error => {
-    console.error("Something went wrong:", error)
+    console.log(error);
+    console.error(`Something went wrong: ${JSON.stringify(error.response.data)} (status ${error.response.status})`)
   });
 ```
 
 When we run above code, it prints:
 
 ```text
-
+status: 200
+{
+  success: true,
+  data: {
+    email: {
+      from: 'AirBnB for Cats <airbnbforcats@magiclogin.email>',
+      reply_to: 'Cat Jones <cat@airbnbforcats.com>',
+      to: 'tabby@ilovecats.com',
+      id: '01020177a8dc234d-51955b92-546f-4da8-9e28-3e7a8eb411ea-000000'
+    },
+    token_id: 'GdyU4bHKeRDYxjrn7y4Fk576HHDpCLyaoNYRUgAtKKGf'
+  }
+}
 ```
 
-That's it! We just sent our first e-mail using the Magic Login API 🎉.
+That's it! We just sent our first e-mail using the Magic Login API 🎉. For more details check out the API page on Sending Emails:
+
+{% page-ref page="api/sending-emails.md" %}
 
 ## What happens now?
 
-Our recipient **tabby@ilovecats.com** will have received an e-mail with a big button that says **Create Account**. This button links to something like **`https://airbnbforcats.com/magic?mtoken=9nwTWNkNDG1TgwaNzVAt3t`**.
-
+Our recipient **tabby@ilovecats.com** will have received an e-mail with a big button that says **Create Account**. This button links to something like **`https://airbnbforcats.com/magic?mtoken=9nwTWNkNDG1TgwaNzVAt3t`**.  
   
-Note how the **mtoken** query parameter got added to the URL. This is a secret token that we will verify in the next guide, which will allow us to **authenticate** the recipient of the e-mail.
+This **mtoken** query parameter automatically got added to the URL. This is a secret token that we will verify in the next guide, which will allow us to **authenticate** the recipient of the e-mail.
 
 
 

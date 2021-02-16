@@ -57,21 +57,54 @@ The **TemplateEmailContent** object for this e-mail, see below.
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-Cake successfully retrieved.
+E-mail succesfully sent.  
+  
+You don't have to save any of the data returned.
 {% endapi-method-response-example-description %}
 
-```
-{"name": "Cake's name",    "recipe": "Cake's recipe name",    "cake": "Binary cake"}
+```javascript
+{
+  success: true,
+  data: {
+    email: {
+      from: 'AirBnB for Cats <airbnbforcats@magiclogin.email>',
+      reply_to: 'Cat Jones <cat@airbnbforcats.com>',
+      to: 'tabby@ilovecats.com',
+      id: '01020177a8dc234d-51955b92-546f-4da8-9e28-3e7a8eb411ea-000000'
+    },
+    token_id: 'GdyU4bHKeRDYxjrn7y4Fk576HHDpCLyaoNYRUgAtKKGf'
+  }
+}
 ```
 {% endapi-method-response-example %}
 
-{% api-method-response-example httpCode=404 %}
+{% api-method-response-example httpCode=400 %}
 {% api-method-response-example-description %}
-Could not find a cake matching this query.
+The content of your request has issues, or the body is missing.
 {% endapi-method-response-example-description %}
 
-```
-{    "message": "Ain't no cake like that."}
+```javascript
+// The Reply To e-mail address is not a valid e-mail address.
+{
+  "success": false,
+  "errors": [
+    {
+      "code": "invalid_request_error",
+      "message": "The request contains invalid parameters",
+      "detail": {
+        "validationErrors": [
+          {
+            "validation": "regex",
+            "message": "\"reply_to\" value is not a valid e-mail address\"",
+            "path": [
+              "reply_to"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -79,6 +112,8 @@ Could not find a cake matching this query.
 {% endapi-method %}
 
 ### TemplateEmailContent
+
+The data in this object describes everything in the e-mail that is not style related.
 
 ```typescript
 interface EmailTemplateContent {
@@ -182,11 +217,13 @@ interface EmailTemplateContent {
 
 ### TemplateStyle
 
+This object allows you to customize the e-mail's styling somewhat.
+
 ```typescript
 interface EmailTemplateStyleOptions {
    /**
     * OPTIONAL
-    * The CSS color of buttons in your e-mail.
+    * The color of buttons in your e-mail.
     * For maximum compatability use a hex color such as "#FAEECC".
     * 
     * Defaults to a dark blue color.
