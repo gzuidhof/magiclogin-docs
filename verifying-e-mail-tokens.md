@@ -100,7 +100,7 @@ Check out the **API** section in the sidebar for more details on these two endpo
 
 ## **Extra Credits**
 
- For completeness and as a sanity check: let's try verifying the token one more time:
+ For completeness and as a sanity check let's try verifying the token one more time:
 
 ```javascript
  { // Request

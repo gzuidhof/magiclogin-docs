@@ -17,9 +17,7 @@ That's exactly what you need for:
 * E-mail sharing or account invites \(e.g. click link in e-mail to get access to this document\).
 
 {% hint style="info" %}
-To make use of Magic Login you will need an account. There is a free trial ****that doesn't require payment details.
-
-If you want to keep using Magic Login after the trial period ends you will need to enter your payment details. 
+To make use of Magic Login you will need an account. There is a free trial ****that doesn't require payment details, use that to try it out.
 {% endhint %}
 
 {% page-ref page="setting-up.md" %}
