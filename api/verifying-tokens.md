@@ -12,10 +12,7 @@ Verify Email Token
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Verify that the token that was sent in an e-mail is valid, retrieve the associated **purpose** and **e-mail address**.  
-  
-Example:  
-If I sent an e-mail to user **ilovecats@gmail.com** with an action to sign up for my service, the button in the e-mail may point to something like **https://airbnbforcats.com/magic?mtoken=2Nk3EwCaQKLmnT**. This endpoint allows you to verify that \`2Nk3EwCaQKLmnT\` is a valid token and that it was in fact **ilovecats@gmail.com** that clicked the link.
+Verify that the token that was sent in an e-mail is valid, retrieve the associated **purpose**, **user data** and **e-mail address**.  
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -27,7 +24,7 @@ Your **Application ID** \(copy it from the Applications page\)
 {% endapi-method-path-parameters %}
 
 {% api-method-headers %}
-{% api-method-parameter name="Authentication" type="string" required=true %}
+{% api-method-parameter name="Authorization" type="string" required=true %}
 API token, in the form of \`Bearer &lt;api-token&gt;\`
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
