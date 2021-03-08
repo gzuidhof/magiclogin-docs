@@ -1,7 +1,3 @@
----
-description: Sending your first e-mail using the Magic Login API
----
-
 # Setting Up
 
 ## Creating an Application
